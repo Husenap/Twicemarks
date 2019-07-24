@@ -11,3 +11,4 @@ set_property(GLOBAL PROPERTY PREDEFINED_TARGETS_FOLDER "predefined")
 set_property(GLOBAL PROPERTY CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_subdirectory("dububench")
+add_subdirectory("momobrot")
