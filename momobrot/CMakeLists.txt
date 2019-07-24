@@ -6,6 +6,7 @@ set(window_files
     "src/window/MainWindow.cpp")
 
 set(main_files
+    "momobrot.manifest"
     "src/main.cpp")
 
 set(src_files

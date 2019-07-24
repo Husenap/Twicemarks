@@ -14,12 +14,7 @@ void SafeRelease(T*& ppT) {
 
 class MainWindow : public BaseWindow<MainWindow> {
 public:
-	MainWindow()
-		: mFactory(NULL)
-		, mRenderTarget(NULL)
-		, mBrush(NULL)
-		, mEllipse() {
-	}
+	MainWindow();
 
 	virtual LPCSTR ClassName() const override {
 		return "Main Window Class";
@@ -31,11 +26,18 @@ private:
 	ID2D1Factory* mFactory;
 	ID2D1HwndRenderTarget* mRenderTarget;
 	ID2D1SolidColorBrush* mBrush;
+	ID2D1SolidColorBrush* mStroke;
+	ID2D1Bitmap* mBitmap;
 	D2D1_ELLIPSE mEllipse;
+
+	D2D1_SIZE_U mBitmapSize;
 
 	void CalculateLayout();
 	HRESULT CreateGraphicsResources();
 	void DiscardGraphicsResources();
 	void OnPaint();
 	void Resize();
+
+	void DrawClockHand(float handLength, float angle, float strokeWidth);
+	void RenderScene();
 };
