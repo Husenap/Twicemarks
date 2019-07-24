@@ -25,10 +25,7 @@ public:
 private:
 	ID2D1Factory* mFactory;
 	ID2D1HwndRenderTarget* mRenderTarget;
-	ID2D1SolidColorBrush* mBrush;
-	ID2D1SolidColorBrush* mStroke;
 	ID2D1Bitmap* mBitmap;
-	D2D1_ELLIPSE mEllipse;
 
 	D2D1_SIZE_U mBitmapSize;
 
@@ -38,6 +35,5 @@ private:
 	void OnPaint();
 	void Resize();
 
-	void DrawClockHand(float handLength, float angle, float strokeWidth);
 	void RenderScene();
 };
