@@ -1,0 +1,15 @@
+name: C++ CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: generate
+      run: cmake . -Ax64 -B_build
+    - name: build
+      run: cmake --build _build
